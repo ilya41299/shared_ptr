@@ -1,6 +1,6 @@
 #include <catch.hpp>
 #include <sstream>
-#include "scoped_ptr"
+#include "scoped_ptr.hpp"
 
 TEST_CASE("Create ptr")
 {
