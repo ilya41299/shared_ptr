@@ -5,7 +5,7 @@
 TEST_CASE("Create ptr")
 {
     scoped_ptr <int> My_ptr;
-    REQUIRE(*My_ptr == nullptr);
+    REQUIRE(My_ptr.get() == nullptr);
 }
 
 TEST_CASE("Test ptr(n), op *, op get()")
