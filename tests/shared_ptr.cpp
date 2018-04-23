@@ -1,7 +1,7 @@
 #include <catch.hpp>
 #include <sstream>
-#include "scoped_ptr.hpp"
-
+#include "shared_ptr.hpp"
+/*
 TEST_CASE("Create ptr")
 {
     scoped_ptr <int> My_ptr;
@@ -36,3 +36,4 @@ TEST_CASE("Test reset")
     int *ptr = My_ptr1.get();
     REQUIRE(*ptr == 6);
 }
+*/
