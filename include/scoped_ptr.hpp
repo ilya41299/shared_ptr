@@ -7,8 +7,7 @@ class scoped_ptr {
 private:
     T * ptr_;
 public:
-    scoped_ptr(); // конструктор сборка указателя
-    scoped_ptr(T * ptr); // конструктор конкретного значения (указывает на конкретный объект)
+    scoped_ptr(T * ptr = nullptr); // конструктор конкретного значения (указывает на конкретный объект)
     ~scoped_ptr();  // деструктор
     void reset(T * ptr); // функция переопределения значения
     T & operator *() const; // вернет конкретное значение содержащееся в памяти по данному указателю
@@ -18,12 +17,6 @@ public:
     scoped_ptr & operator=(scoped_ptr const &) = delete; // Конструкция delete запрещает компилятору использовать оператор присваивающего копирования.
     scoped_ptr(scoped_ptr const &) = delete;// Конструкция delete запрещает компилятору использовать оператор копирования.
 };
-
-template <typename T>
-scoped_ptr<T>::scoped_ptr()
-{
-    ptr_ = nullptr;
-}
 
 template <typename T>
 scoped_ptr<T>::scoped_ptr(T * ptr) {
