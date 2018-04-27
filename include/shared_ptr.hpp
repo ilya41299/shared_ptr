@@ -59,7 +59,7 @@ template <typename T>
 void shared_ptr<T>::swap(shared_ptr & shared)
 {
 	std::swap(shared.ptr_, ptr_);
-	std::swap(shared.counter_, counter_);
+	std::swap(shared.count, count);
 }
 
 template <typename T>
