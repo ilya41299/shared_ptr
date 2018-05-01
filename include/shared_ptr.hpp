@@ -41,8 +41,8 @@ template <typename T>
 shared_ptr<T>::shared_ptr(shared_ptr const & other)
 {
 	ptr_ = other.ptr_;
+	count = other.count;
 	if (other.count) ++*count;
-	else count = nullptr;
 }
 
 template <typename T>
